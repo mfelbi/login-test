@@ -1,0 +1,32 @@
+<!DOCTYPE html> 
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="login.css"> 
+    <script src="login.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h2>Login</h2>
+        <form id="loginForm" novalidate> 
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" 
+                required minlength="5" maxlength="40"
+                autocomplete="off" spellcheck="false" 
+                onpaste="return false;">
+            <br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" 
+                required minlength="8" maxlength="15"
+                pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[@.#$!%*?&])[A-Za-z\\d@.#$!%*?&]{8,15}$"
+                autocomplete="new-password" spellcheck="false"
+                onpaste="return false;">
+            <br>
+            <button type="submit">Login</button>
+            <span id="errorMessage" class="error-message"></span> 
+        </form>
+    </div>
+</body>
+</html>
